@@ -31,8 +31,15 @@ body {
     text-align: center;
     left:25%;
     width: 560px;
+    top: 75px;
     max-width: 100%;  
 }
+
+div.btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .container h2 {
     margin-top: 5px;
     margin-bottom: 40px;
@@ -115,22 +122,29 @@ a:hover {
     cursor: pointer;
     transition: transform, border-radius 0.5s;
 }
-.delete-btn:hover {
-  
-
+.voltar-btn {
+    display: flex;
+    background: linear-gradient(to left, #67DF9B, #20C4AE);
+    animation: colors 25s ease infinite;
+    border: 1px solid black;
+    color: aliceblue;
+    font-family: 'Muli';
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height: 35px;
+    width: 150px;
+    cursor: pointer;
+    transition: transform, border-radius 0.5s;
 }
+
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <nav>
-            <ul class="nav-bar">
-                <li> <a href="paginaPrincipal.php">Home</a></li>
-                <li><a href="suasContas.php">Suas contas</a></li>
-                <li> <a href="configuracao.php">Configurações</a></li>
-            </ul>
-        </nav>
+    
         <header>
         <div>
             <h1>Deseja excluir sua conta?</h1>
@@ -138,11 +152,11 @@ a:hover {
             <h2>Você perderá acesso a sua conta.</h2>
         </header>
         
-        <div>
+        <div class="btn">
             <form action="excluirConta.php" method="post">
                 <button class="delete-btn">Excluir Dados</button>
             </form>
-            <a href="paginaprincipal.php">Voltar</a>
+            <a href="paginaprincipal.php"><button class="voltar-btn">Voltar</button></a>
 
           </div>
     </div>

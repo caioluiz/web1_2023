@@ -63,6 +63,7 @@ body {
     justify-content: center;
     text-align: center;
     left:25%;
+    top:30px;
     width: 560px;
     max-width: 100%;  
 }
@@ -117,12 +118,17 @@ button {
 .logout{
     text-decoration: none;
     color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 3px solid dodgerblue;
-    border-radius: 10px;
-    padding: 10px;
+    background: linear-gradient(to left, #EB274B, #FF842B, #EB274B);
+    border: 1px solid black;
+    border-radius: 13px;
+    padding: 6px;
     position: absolute;
-    top: 4%;
+    top: 3%;
+    left: 2%
+}
+.logout:hover {
+    color: black;
+    background-color: white;
 }
 
 a {
@@ -161,7 +167,7 @@ a:hover {
             <ul class="nav-bar">
                 <li> <a href="paginaPrincipal.php">Home</a></li>
                 <li><a href="suasContas.php">Suas contas</a></li>
-                <li> <a href="configuracao.php">Configurações</a></li>
+                <li> <a href="configuracao.php">Editar</a></li>
             </ul>
         </nav>
         <header>

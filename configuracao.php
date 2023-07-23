@@ -22,7 +22,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina principal</title>
+    <title>Pagina principal | Editar Informações</title>
     <style>
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 body {
@@ -133,7 +133,7 @@ a:hover {
             <ul class="nav-bar">
                 <li> <a href="paginaPrincipal.php">Home</a></li>
                 <li><a href="suasContas.php">Suas contas</a></li>
-                <li> <a href="configuracao.php">Configurações</a></li>
+                <li> <a href="configuracao.php">Editar</a></li>
             </ul>
         </nav>
         <header>
@@ -144,7 +144,7 @@ a:hover {
         <form action="alteracao.php" method="POST">
             <input type="text" name="nomeNovo" placeholder="Novo Nome">
             <br><br>
-            <input type="text" name="senhaNova" placeholder="Nova Senha">
+            <input type="password" name="senhaNova" placeholder="Nova Senha">
             <br><br>
 
             <input class="inputSubmit" type="submit" name="submit" value="Editar">

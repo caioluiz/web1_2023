@@ -32,7 +32,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina principal</title>
+    <title>Pagina principal | Suas Contas</title>
     <style>
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 body {
@@ -144,7 +144,7 @@ a:hover {
             <ul class="nav-bar">
                 <li> <a href="paginaPrincipal.php">Home</a></li>
                 <li><a href="suasContas.php">Suas contas</a></li>
-                <li> <a href="configuracao.php">Configurações</a></li>
+                <li> <a href="configuracao.php">Editar</a></li>
             </ul>
         </nav>
         <header>
@@ -161,7 +161,7 @@ a:hover {
                 </section>
                 <section>
                 <form action="alteracaoemail.php" method="POST">
-                    <input type="text" name="novos_emails" class="input-email" placeholder="Cadastre seu email" oninput="validarEmail(this)"></input>
+                    <input type="email" name="novos_emails" class="input-email" placeholder="Cadastre seu email" oninput="validarEmail(this)"></input>
                     <button class="send" id="send-btn">Enviar</button>
                 </form>
                 </section>
