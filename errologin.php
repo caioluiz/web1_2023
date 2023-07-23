@@ -12,6 +12,16 @@
             text-align: center;
             color: white;
         }
+        div{
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: #fff;
+        }
         .box{
             position: absolute;
             top: 50%;
@@ -34,10 +44,12 @@
     </style>
 </head>
 <body>
-    <h1>Trabalho Web1</h1>
-    <h2>Bem - Vindo!</h2>
-    <div class="box">
-        <a href="login.php">Login</a>
+    <div class="container">
+        <a href="index.php">Voltar</a>
+        <h1>Erro!</h1>
+        <h2>Usuário não encontrado no banco de dados!</h2>
+    </div>
+    
       
     </div>
 </body>

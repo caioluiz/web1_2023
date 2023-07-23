@@ -40,6 +40,20 @@
             background-color: deepskyblue;
             cursor: pointer;
         }
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 3px solid dodgerblue;
+            border-radius: 10px;
+            padding: 10px;
+            position: absolute;
+            top: 4%;
+        }
+        a:hover{
+            color: dodgerblue;
+            background-color: white;
+        }
     </style>
 </head>
 <body>

@@ -44,7 +44,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Muli';
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -62,6 +62,7 @@ body {
     padding: 50px 70px;
     justify-content: center;
     text-align: center;
+    left:25%;
     width: 560px;
     max-width: 100%;  
 }
@@ -70,7 +71,7 @@ body {
     margin-bottom: 40px;
 }
 .container p {
-    margin-bottom: 55px;
+    margin-bottom: 35px;
 }
 input { 
     width: 524px;
@@ -85,6 +86,11 @@ input:focus{
 #message {
     padding-bottom: 50px;
 }
+
+.form {
+    display: flex;
+    justify-content: center;
+}
 button {
     background: linear-gradient(to left, #67DF9B, #20C4AE);
     border: none;
@@ -95,11 +101,7 @@ button {
     color: white;
     transition: transform 1s;
 }
-button:hover {
-    background-color: white;
-    opacity: 80%;
-    transform: scale(0.99);
-}
+
 .nav-bar {
     display: flex;
     text-align: center;
@@ -112,6 +114,17 @@ button:hover {
     border-bottom: 1px solid #67DF9B;
     border-radius: 5%;
 }
+.logout{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 3px solid dodgerblue;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 4%;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -130,18 +143,19 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin-right: 10px;
-    height: 20px;
-    width: 20px;
+    height: 35px;
+    width: 150px;
     cursor: pointer;
     transition: transform, border-radius 0.5s;
 }
 .delete-btn:hover {
-    transform: scale(0.9);
-    border-radius: 50%;
+  
+
 }
     </style>
 </head>
 <body>
+    <a class="logout" href="logout.php">Sair</a>
     <div class="container">
         <nav>
             <ul class="nav-bar">
@@ -177,6 +191,10 @@ a:hover {
             <li>
                 <p>Horas de sono: <?php echo $horasdesono; ?></p>
             </li>
+            <a href="confirmarExclusao.html" class="form">
+                <button class="delete-btn">Excluir Dados</button>
+            </a>
+
         </ul>
     </div>
 </body>
