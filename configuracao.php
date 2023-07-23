@@ -11,20 +11,6 @@
     $logado = $_SESSION['cpf'];
    
 
-    // Retrieve the input from the HTML form
-    $newUsername = $_POST['nomeNovo'];
-    $newPassword = $_POST['senhaNova'];
-
-    // Replace 'current_username' with the existing username that you want to update
-    $sql = "UPDATE respondente SET nome='$newUsername', senha='$newPassword' WHERE cpf='$logado'";
-
-    if ($mysqli->query($sql) === TRUE) {
-        echo "Username and Password updated successfully!";
-    } else {
-        echo "Error updating record: " . $mysqli->error;
-    }
-
-    $mysqli->close();
 
 ?>
 
@@ -146,7 +132,7 @@ a:hover {
         <nav>
             <ul class="nav-bar">
                 <li> <a href="paginaPrincipal.php">Home</a></li>
-                <li><a href="edit_usuario.php">Suas contas</a></li>
+                <li><a href="suasContas.php">Suas contas</a></li>
                 <li> <a href="configuracao.php">Configurações</a></li>
             </ul>
         </nav>
@@ -155,7 +141,7 @@ a:hover {
             <h2>Editar Informações do usuario</h2>
         </div>
         </header>
-        <form action="" method="POST">
+        <form action="alteracao.php" method="POST">
             <input type="text" name="nomeNovo" placeholder="Novo Nome">
             <br><br>
             <input type="text" name="senhaNova" placeholder="Nova Senha">

@@ -1,0 +1,17 @@
+.emails-container {
+    margin-top: 15px;
+}
+.delete-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    margin-top: 5px;
+}
+.send {
+    margin-bottom: 30px;
+}
+.list {
+    display: flex;
+    gap: 20px;
+}

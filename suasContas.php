@@ -1,15 +1,15 @@
 <?php
     session_start();
     include_once('conexao.php');
-    // print_r($_SESSION);
-    if((!isset($_SESSION['cpf']) == true)  and (!isset($_SESSION['senha']) == true))
-    {
+
+    if((!isset($_SESSION['cpf']) == true)  and (!isset($_SESSION['senha']) == true)) {
         unset($_SESSION['cpf']);
         unset($_SESSION['senha']);
         header('Location: login.php');
     }
+
     $logado = $_SESSION['cpf'];
-    
+
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
@@ -22,13 +22,9 @@
     $result = $mysqli->query($sql);
     $row = $result->fetch_assoc();
     
-        $nome = $row['nome'];
-        $cpf = $row['cpf'];
         $email = $row['email'];
-        $peso = $row['peso'];
-        $altura = $row['altura'];
-        $horasdesono = $row['horas_sono_dia'];
 
+   
 ?>
 
 <!DOCTYPE html>
@@ -140,6 +136,7 @@ a:hover {
     border-radius: 50%;
 }
     </style>
+    
 </head>
 <body>
     <div class="container">
@@ -152,32 +149,28 @@ a:hover {
         </nav>
         <header>
         <div>
-            <h1>Bem vindo a sua pagina, <?php echo $nome; ?></h1>
-        </div>
-        <div>
-            <h2>Informações do usuario</h2>
+            <h2>Suas Contas</h2>
         </div>
         </header>
-        <ul>
-            <li>
-                <p>Email: <?php echo $email; ?></p>
-            </li>
-            <li>
-                <p>Nome: <?php echo $nome; ?></p>
-            </li>
-            <li>
-                <p>cpf: <?php echo $cpf; ?></p>
-            </li>
-            <li>
-                <p>Peso: <?php echo $peso; ?></p>
-            </li>
-            <li>
-                <p>Altura: <?php echo $altura; ?></p>
-            </li>
-            <li>
-                <p>Horas de sono: <?php echo $horasdesono; ?></p>
-            </li>
-        </ul>
+            <div>
+                <section>
+                    <section>
+                        <h2 id="title">Emails cadastrados</h2>
+                    </section>
+                    <!-- aqui tem que pegar com php o principal -->
+                </section>
+                <section>
+                <form action="alteracaoemail.php" method="POST">
+                    <input type="text" name="novos_emails" class="input-email" placeholder="Cadastre seu email" oninput="validarEmail(this)"></input>
+                    <button class="send" id="send-btn">Enviar</button>
+                </form>
+                </section>
+                <input type="text" id="email" placeholder="email principal" <?php echo $email; ?> disabled>
+                <div class="emails-container"></div>
+        
+            </div>
+            
+            <script src="suasContas.js"></script>
     </div>
 </body>
 </html>
